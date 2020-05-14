@@ -33,12 +33,13 @@ body {
   color: white;
   top: 100%;
   transition: 0.2s ease-in-out;
-  left: 50%;
+  left: 90%;
   transform: translate(-50%, -50%);
 }
 
 /* ANIMATION FOR BEFORE HEADING */
 .main-heading:hover::before {
+  content: "FOREVER";
   transform: rotateZ(90deg);
   top: 40%;
   letter-spacing: 5px;
@@ -87,11 +88,11 @@ body {
 }
 /* SOCIAL BUTTON */
 .social-btn {
-  color: white;
+  color: rgb(0, 0, 0);
   display: block;
   font-family: "poppins";
   position: fixed;
-  right: 1vw;
+  right: 4px;
   top: 8vh;
 }
 
@@ -101,7 +102,7 @@ body {
   width: 100px;
   height: 30px;
   border-radius: 20px;
-  background-color: black;
+  background-color: rgb(251, 255, 0);
   z-index: -1;
   top: 50%;
   left: 50%;
@@ -112,9 +113,10 @@ body {
   position: absolute;
   content: "";
   width: 100px;
+  border: 2px white solid;
   height: 30px;
   border-radius: 20px;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
   z-index: -1;
   top: 50%;
   left: 200%;
@@ -125,17 +127,22 @@ body {
 /* ANIMATION FOR SOCIAL BUTTON */
 
 .social-btn:hover::after {
-  left: 50%;
+  left: 45%;
 }
 .social-btn:hover {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 
 /* SOCIAL LINKS */
 
 .social {
+  transition: 0.1s;
   position: fixed;
-  right: 2vw;
+  right: -10vw;
+}
+
+.social.active {
+  right: 2vh;
 }
 
 .social a {
