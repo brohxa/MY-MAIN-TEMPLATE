@@ -5,6 +5,13 @@
   text-decoration: none;
   list-style: none;
 }
+/* PRELOAD */
+.preload * {
+  -webkit-transition: none;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
 /* BODY */
 body {
   background-image: url("img/background.jpg");
@@ -17,7 +24,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
+  z-index: -5;
   opacity: 0.6;
   background-color: black;
 }
@@ -197,6 +204,7 @@ body {
   position: absolute;
   left: 70%;
   top: 40%;
+  z-index: -1;
 }
 .typewriter {
   position: absolute;
@@ -204,6 +212,7 @@ body {
   top: 50%;
   font-family: "poppins", sans-serif;
   display: inline-block;
+  z-index: -1;
 }
 
 .typewriter-text {
@@ -230,7 +239,7 @@ body {
 
 /* MEDIA START */
 
-@media all and (max-width: 860px) {
+@media all and (max-width: 1000px) {
   .name {
     left: 50%;
     top: 40%;
@@ -255,6 +264,12 @@ body {
   }
 }
 @media all and (max-width: 420px) {
+  .social a {
+    margin-top: 10px;
+  }
+  .navbar {
+    margin-left: 2vw;
+  }
   .navbar a {
     font-size: 20px;
     line-height: 40px;
@@ -270,5 +285,126 @@ body {
   }
   .typewriter-text {
     font-size: 14px;
+  }
+}
+
+/* ----------------ABOUT--------------------- */
+
+.about {
+  position: fixed;
+  left: 0;
+  transform: translateX(-100%);
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(14, 13, 13);
+  z-index: -1;
+  transition: 0.5s ease-in;
+}
+
+.about.about-active {
+  transform: translateY(0);
+}
+
+/* ABOUT IMAGE */
+
+.about-image {
+  position: absolute;
+  left: 30%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  clip-path: polygon(21% 0, 88% 13%, 100% 100%, 8% 95%);
+}
+
+/* ABOUT ALL TEXT */
+
+.about-heading {
+  font-family: "Oswald", sans-serif;
+  display: block;
+  width: 250px;
+  white-space: nowrap;
+  height: 100px;
+  font-size: 50px;
+  color: white;
+  letter-spacing: 6px;
+  position: absolute;
+  right: 20%;
+  top: 15%;
+  overflow: hidden;
+}
+.about-heading::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  top: 90%;
+  background: rgb(255, 255, 255);
+  animation: underlinewhite 3s infinite;
+}
+.about-heading::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  top: 90%;
+  left: 50%;
+  background: rgb(251, 255, 2);
+  animation: underlineyellow 3s infinite;
+  animation-delay: 1s;
+}
+.sub-text {
+  font-family: "poppins", sans-serif;
+  display: block;
+  width: 650px;
+  height: 50px;
+  font-size: 24px;
+  color: white;
+  position: absolute;
+  right: 5%;
+  top: 30%;
+  overflow: hidden;
+}
+.load-text {
+  font-family: "poppins", sans-serif;
+  width: 650px;
+  height: 200px;
+  font-size: 18px;
+  color: rgb(204, 204, 204);
+  position: absolute;
+  right: 5%;
+  top: 40%;
+  font-weight: 100;
+  border-bottom: 1px solid rgb(173, 173, 173);
+  padding-bottom: 20px;
+}
+.contact {
+  margin-top: 30px;
+  font-family: "poppins", sans-serif;
+  width: 650px;
+  height: 200px;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  right: 5%;
+  top: 60%;
+  font-weight: 100;
+}
+
+/* ANIMATION FOR UNDERLINE */
+
+@keyframes underlinewhite {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+@keyframes underlineyellow {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
   }
 }

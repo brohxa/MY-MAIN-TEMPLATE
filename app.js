@@ -18,3 +18,12 @@ socialBtn.addEventListener("click", function () {
 socialBtn.addEventListener("click", function () {
   socialBtn.classList.toggle("clicked");
 });
+
+// ABOUT COME OUT
+
+let aboutBtn = document.querySelector(".about-click");
+
+aboutBtn.addEventListener("click", function () {
+  let about = document.querySelector(".about");
+  about.classList.toggle("about-active");
+});
