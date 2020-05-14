@@ -6,3 +6,10 @@ gsap.from(".main-heading", {
   duration: 2,
   ease: Power1.easeOut,
 });
+gsap.from("nav", {
+  x: -30,
+  opacity: 0,
+  duration: 1,
+  delay: 3,
+  ease: Power1.easeOut,
+});

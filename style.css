@@ -21,7 +21,7 @@ body {
   cursor: none;
   position: relative;
   transition: 0.1s ease-in;
-  margin-left: 5vw;
+  margin-left: 2vw;
   color: rgb(255, 238, 6);
 }
 
@@ -49,4 +49,39 @@ body {
 
 .main-heading:hover {
   letter-spacing: 2px;
+}
+
+/* NAVBAR */
+
+.navbar {
+  margin-left: 30px;
+  position: fixed;
+  margin-top: 30vh;
+}
+.navbar a {
+  display: inline-block;
+  font-size: 35px;
+  font-weight: 50;
+  transform: 0.2s;
+  line-height: 60px;
+  color: rgb(185, 185, 185);
+  font-family: "poppins", sans-serif;
+  position: relative;
+}
+
+.navbar a::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  width: 0px;
+  height: 1px;
+  background-color: white;
+  transition: 0.2s ease-in;
+}
+.navbar a:hover::before {
+  width: 100%;
+  background-color: yellow;
+}
+.navbar a:hover {
+  color: white;
 }
