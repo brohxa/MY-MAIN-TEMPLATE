@@ -60,7 +60,7 @@ body {
 }
 .navbar a {
   display: inline-block;
-  font-size: 35px;
+  font-size: 25px;
   font-weight: 50;
   transform: 0.2s;
   line-height: 60px;
@@ -76,7 +76,7 @@ body {
   width: 0px;
   height: 1px;
   background-color: white;
-  transition: 0.2s ease-in;
+  transition: 0.2s ease;
 }
 .navbar a:hover::before {
   width: 100%;
@@ -84,4 +84,87 @@ body {
 }
 .navbar a:hover {
   color: white;
+}
+/* SOCIAL BUTTON */
+.social-btn {
+  color: white;
+  display: block;
+  font-family: "poppins";
+  position: fixed;
+  right: 1vw;
+  top: 8vh;
+}
+
+.social-btn::before {
+  position: absolute;
+  content: "";
+  width: 100px;
+  height: 30px;
+  border-radius: 20px;
+  background-color: black;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.1s;
+}
+.social-btn::after {
+  position: absolute;
+  content: "";
+  width: 100px;
+  height: 30px;
+  border-radius: 20px;
+  background-color: rgb(255, 255, 255);
+  z-index: -1;
+  top: 50%;
+  left: 200%;
+  transform: translate(-50%, -50%);
+  transition: 0.2s;
+}
+
+/* ANIMATION FOR SOCIAL BUTTON */
+
+.social-btn:hover::after {
+  left: 50%;
+}
+.social-btn:hover {
+  color: rgb(0, 0, 0);
+}
+
+/* SOCIAL LINKS */
+
+.social {
+  position: fixed;
+  right: 2vw;
+}
+
+.social a {
+  display: block;
+  color: rgb(255, 255, 255);
+  margin-top: 20px;
+  position: relative;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.social a::before {
+  content: "";
+  position: absolute;
+  left: -50%;
+  top: -20%;
+  transform: translate(-50%, -50%);
+  width: 0%;
+  height: 0%;
+  border-radius: 100px;
+  transition: 0.2s;
+  background-color: yellow;
+}
+
+/* ANIMATION FOR SOCIALS WHEN HOVER */
+.social a:hover::before {
+  width: 10px;
+  height: 10px;
+}
+.social a:hover {
+  color: rgb(255, 255, 255);
 }
