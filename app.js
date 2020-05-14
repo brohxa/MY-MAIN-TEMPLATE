@@ -27,3 +27,11 @@ aboutBtn.addEventListener("click", function () {
   let about = document.querySelector(".about");
   about.classList.toggle("about-active");
 });
+
+var docWidth = document.documentElement.offsetWidth;
+
+[].forEach.call(document.querySelectorAll("*"), function (el) {
+  if (el.offsetWidth > docWidth) {
+    console.log(el);
+  }
+});

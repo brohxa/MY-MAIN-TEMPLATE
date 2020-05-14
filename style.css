@@ -164,7 +164,7 @@ body {
 }
 
 .social.active {
-  right: 2vh;
+  right: 4vh;
 }
 
 .social a {
@@ -211,17 +211,19 @@ body {
 }
 .typewriter {
   position: absolute;
+  width: 200px;
   left: 70%;
   top: 50%;
   font-family: "poppins", sans-serif;
-  display: inline-block;
+  display: flex;
   z-index: -1;
 }
 
 .typewriter-text {
   overflow: hidden;
   letter-spacing: 2px;
-  animation: typing 4s;
+  animation: typing 3s;
+  animation-fill-mode: forwards;
   white-space: nowrap;
   color: yellow;
   font-size: 20px;
@@ -229,14 +231,72 @@ body {
   border-right: 2px solid rgb(255, 255, 255);
   box-sizing: border-box;
 }
+.typewriter-text1 {
+  overflow: hidden;
+  width: 0%;
+  letter-spacing: 2px;
+  animation: typing1 3s;
+  animation-fill-mode: forwards;
+  animation-delay: 3s;
+  white-space: nowrap;
+  color: yellow;
+  font-size: 20px;
+  font-weight: 100;
+  border-right: 0px solid rgb(255, 255, 255);
+  box-sizing: border-box;
+}
+.typewriter-text2 {
+  overflow: hidden;
+  width: 0%;
+  letter-spacing: 2px;
+  animation: typing2 3s;
+  animation-fill-mode: forwards;
+  animation-delay: 6s;
+  white-space: nowrap;
+  color: yellow;
+  font-size: 20px;
+  font-weight: 100;
+  border-right: 0px solid rgb(255, 255, 255);
+  box-sizing: border-box;
+}
 
 @keyframes typing {
-  from {
+  0% {
     width: 0%;
   }
-  to {
+  50% {
     width: 100%;
     border-right: 2px solid rgb(255, 255, 255);
+  }
+  100% {
+    width: 0%;
+    border-right: 0px solid rgb(255, 255, 255);
+  }
+}
+@keyframes typing1 {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 100%;
+    border-right: 2px solid rgb(255, 255, 255);
+  }
+  100% {
+    width: 0%;
+    border-right: 0px solid rgb(255, 255, 255);
+  }
+}
+@keyframes typing2 {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 100%;
+    border-right: 2px solid rgb(255, 255, 255);
+  }
+  100% {
+    width: 100%;
+    border-right: 0px solid rgb(255, 255, 255);
   }
 }
 
@@ -523,9 +583,24 @@ body {
   background-color: rgb(245, 0, 0);
   transition: 0.4s;
 }
+.test::after {
+  content: "";
+  position: absolute;
+  width: 450px;
+  z-index: -1;
+  height: 2px;
+  opacity: 0;
+  top: 99.5%;
+  background-color: rgb(215, 253, 0);
+  transition: 0.4s;
+}
+/* TESTIMONIAL HOVER EFFECT */
 
 .test:hover::before {
   top: 0%;
+}
+.test:hover::after {
+  opacity: 1;
 }
 
 .test-text {
@@ -544,9 +619,13 @@ body {
   transition: 0.3s;
 }
 
+/* FEATHER */
+
 .test .fas {
   color: white;
   font-size: 30px;
   margin: 10px;
   display: block;
 }
+
+/* MEDIA FOR ABOUT */
