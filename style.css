@@ -1,0 +1,52 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+/* BODY */
+body {
+  background-image: url("img/background.jpg");
+  background-repeat: no-repeat;
+}
+/* MAIN HEADING */
+.main-heading {
+  width: 120px;
+  font-family: "oswald", sans-serif;
+  font-size: 50px;
+  text-align: center;
+  display: inline-block;
+  margin-top: 3vh;
+  cursor: none;
+  position: relative;
+  transition: 0.1s ease-in;
+  margin-left: 5vw;
+  color: rgb(255, 238, 6);
+}
+
+/* AFTER AND BEFORE FOR MAIN HEADING */
+.main-heading::before {
+  content: "ELEGANCE";
+  font-size: 15px;
+  position: absolute;
+  color: white;
+  top: 100%;
+  transition: 0.2s ease-in-out;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ANIMATION FOR BEFORE HEADING */
+.main-heading:hover::before {
+  transform: rotateZ(90deg);
+  top: 40%;
+  letter-spacing: 5px;
+  left: 80%;
+}
+
+/* ANIMATION FOR MAIN HEADING */
+
+.main-heading:hover {
+  letter-spacing: 2px;
+}
