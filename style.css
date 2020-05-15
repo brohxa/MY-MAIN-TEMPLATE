@@ -14,7 +14,17 @@
   -ms-transition: none !important;
   -o-transition: none !important;
 }
-
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  width: 3px solid #232943;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #ffffff, rgb(255, 255, 255));
+  border-radius: 3px;
+}
 /* BODY */
 body {
   background-image: url("img/background.jpg");
@@ -33,6 +43,7 @@ body {
 }
 /* MAIN HEADING */
 .main-heading {
+  z-index: 999;
   width: 120px;
   font-family: "oswald", sans-serif;
   font-size: 50px;
@@ -1332,4 +1343,128 @@ body {
   .social.active {
     right: 1.5vh;
   }
+}
+
+/* ---------------------------------PORTFOLIO--------------- */
+
+.portfolio {
+  position: fixed;
+  left: 0;
+  transform: translateY(100%);
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(14, 13, 13);
+  transition: 0.5s ease-in;
+  overflow-x: hidden;
+  z-index: -1;
+}
+
+.portfolio.portfolio-active {
+  transform: translateY(0);
+}
+
+/* PORTFOLIO HEADING */
+.portfolio-heading {
+  font-family: "Oswald", sans-serif;
+  display: block;
+  width: 240px;
+  white-space: nowrap;
+  height: 80px;
+  font-size: 40px;
+  color: white;
+  letter-spacing: 6px;
+  position: absolute;
+  right: 20%;
+  top: 15%;
+  overflow: hidden;
+}
+.portfolio-heading::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  top: 90%;
+  background: rgb(255, 255, 255);
+  animation: underlinewhite 3s infinite;
+}
+.portfolio-heading::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  top: 90%;
+  left: 50%;
+  background: rgb(0, 174, 255);
+  animation: underlineyellow 3s infinite;
+  animation-delay: 1s;
+}
+
+.portfolio .project-container {
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 70%;
+  height: 60%;
+}
+.portfolio div {
+  margin: 5px;
+  width: 500px;
+  height: 300px;
+  background-color: blanchedalmond;
+  position: relative;
+}
+.portfolio div::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 300px;
+  transform: translateY(0);
+  background-color: rgb(0, 0, 0);
+  opacity: 0;
+  transition: 0.3s;
+}
+.portfolio a {
+  display: block;
+  position: absolute;
+  width: 200px;
+  height: 40px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  line-height: 40px;
+  font-family: "poppins", sans-serif;
+  background-color: rgb(255, 251, 0);
+  opacity: 0;
+  border-radius: 40px;
+  transition: 0.3s;
+}
+.portfolio div:hover::before {
+  opacity: 0.7;
+}
+.portfolio div:hover a {
+  opacity: 1;
+}
+
+.project1 {
+  background-image: url("img/port1.jpg");
+}
+.project2 {
+  background-image: url("img/port2.jpg");
+}
+.project3 {
+  background-image: url("img/port3.jpg");
+}
+.project4 {
+  background-image: url("img/port4.jpg");
+}
+.project5 {
+  background-image: url("img/port5.jpg");
+}
+.project6 {
+  background-image: url("img/port6.jpg");
 }

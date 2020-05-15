@@ -23,15 +23,20 @@ socialBtn.addEventListener("click", function () {
 
 let aboutBtn = document.querySelector(".about-click");
 
-aboutBtn.addEventListener("click", function () {
+aboutBtn.addEventListener("click", function aboutIsActive() {
+  let portfolio = document.querySelector(".portfolio");
   let about = document.querySelector(".about");
   about.classList.toggle("about-active");
+  portfolio.classList.remove("portfolio-active");
 });
 
-var docWidth = document.documentElement.offsetWidth;
+// PORTFOLIO COME OUT
 
-[].forEach.call(document.querySelectorAll("*"), function (el) {
-  if (el.offsetWidth > docWidth) {
-    console.log(el);
-  }
+let portfolioBtn = document.querySelector(".portfolio-click");
+
+portfolioBtn.addEventListener("click", function portfolioIsActive() {
+  let about = document.querySelector(".about");
+  let portfolio = document.querySelector(".portfolio");
+  portfolio.classList.toggle("portfolio-active");
+  about.classList.remove("about-active");
 });
