@@ -1519,8 +1519,8 @@ body {
 }
 @media all and (max-width: 768px) {
   .portfolio div {
-    width: 230px;
-    height: 140px;
+    width: 280px;
+    height: 180px;
   }
 }
 @media all and (max-width: 414px) {
@@ -1556,3 +1556,17 @@ body {
     height: 150px;
   }
 }
+@media all and (max-width: 541px) and (min-width: 414px) {
+  .portfolio {
+    position: absolute;
+  }
+  .portfolio div {
+    width: 350px;
+    height: 230px;
+  }
+  .project-container {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}
+
+/* -------------------------------------------------RESUME---------- */
