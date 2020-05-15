@@ -19,6 +19,17 @@ socialBtn.addEventListener("click", function () {
   socialBtn.classList.toggle("clicked");
 });
 
+// HOME REMOVE ALL
+
+let homeBtn = document.querySelector(".home-click");
+
+homeBtn.addEventListener("click", function homeIsActive() {
+  let about = document.querySelector(".about");
+  let portfolio = document.querySelector(".portfolio");
+  about.classList.remove("about-active");
+  portfolio.classList.remove("portfolio-active");
+});
+
 // ABOUT COME OUT
 
 let aboutBtn = document.querySelector(".about-click");
