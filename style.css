@@ -211,7 +211,7 @@ body {
 }
 .typewriter {
   position: absolute;
-  width: 200px;
+  width: 300px;
   left: 70%;
   top: 50%;
   font-family: "poppins", sans-serif;
@@ -529,7 +529,6 @@ body {
 /* TESTIMONIAL */
 
 .testimonial {
-  display: block;
   margin-top: 150vh;
   margin-left: 50%;
   transform: translate(-50%);
@@ -549,7 +548,7 @@ body {
   font-size: 50px;
   color: white;
   position: absolute;
-  top: 0;
+  top: 4%;
   left: 8%;
 }
 
@@ -622,10 +621,314 @@ body {
 /* FEATHER */
 
 .test .fas {
+  position: absolute;
+  left: 10px;
+  top: 10px;
   color: white;
   font-size: 30px;
   margin: 10px;
   display: block;
 }
 
+/* SERVICES WE PROVIDE */
+.service-cards h1 {
+  font-family: "poppins", sans-serif;
+  display: block;
+  width: 250px;
+  white-space: nowrap;
+  height: 100px;
+  font-size: 50px;
+  color: white;
+  position: absolute;
+  top: -10vh;
+  left: 50%;
+}
+.service-cards {
+  margin-top: 10vh;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  font-family: "poppins", sans-serif;
+  color: rgb(230, 230, 230);
+  display: grid;
+  width: 60%;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 10vh;
+}
+
+.service-cards div {
+  margin: 5px;
+  background-color: rgb(27, 27, 27);
+  width: 450px;
+  height: 350px;
+  position: relative;
+}
+.service-cards h3 {
+  font-weight: 100;
+  font-size: 35px;
+  text-align: center;
+  margin-top: 30px;
+  display: block;
+}
+.service-cards p {
+  display: block;
+  text-align: center;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-top: 150px;
+}
+.service-cards i {
+  position: absolute;
+  color: rgb(58, 209, 91);
+  font-size: 40px;
+  left: 80%;
+  top: 40%;
+}
+
 /* MEDIA FOR ABOUT */
+
+@media all and (max-width: 1618px) {
+  .about-heading {
+    width: 220px;
+    font-size: 40px;
+  }
+  .service-cards {
+    left: 43%;
+  }
+  .service-cards h1 {
+    left: 60%;
+  }
+  .test {
+    width: 400px;
+    height: 300px;
+  }
+  .testimonial {
+    margin-left: 55%;
+  }
+  .service-cards div {
+    margin: 5px;
+    background-color: rgb(27, 27, 27);
+    width: 400px;
+    height: 300px;
+    position: relative;
+  }
+}
+@media all and (max-width: 1352px) {
+  .about-image {
+    left: 10%;
+    opacity: 0.4;
+  }
+  .about-heading {
+    width: 220px;
+    font-size: 40px;
+  }
+  .service-cards {
+    left: 43%;
+  }
+  .service-cards h1 {
+    left: 60%;
+    font-size: 40px;
+  }
+  .testimonial h1 {
+    font-size: 40px;
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  .test {
+    width: 270px;
+    height: 220px;
+    background-size: cover;
+    margin: 3px;
+  }
+  .testimonial h4 {
+    font-size: 13px;
+    margin-top: 40%;
+  }
+  .testimonial {
+    margin-left: 55%;
+  }
+  .service-cards {
+    left: 45%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .service-cards h1 {
+    left: 50%;
+  }
+  .service-cards h3 {
+    margin-top: 5%;
+    font-size: 25px;
+  }
+  .service-cards p {
+    margin-top: 35%;
+    font-size: 14px;
+  }
+  .service-cards i {
+    top: 25%;
+  }
+}
+@media all and (max-width: 1024px) {
+  .about-image {
+    left: 10%;
+    opacity: 0.3;
+  }
+  .about-heading {
+    left: 50%;
+    width: 170px;
+    height: 60px;
+    font-size: 30px;
+  }
+  .service-cards {
+    left: 43%;
+  }
+  .service-cards h1 {
+    left: 60%;
+    font-size: 40px;
+  }
+  .testimonial h1 {
+    font-size: 40px;
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  .test {
+    width: 230px;
+    height: 220px;
+    background-size: cover;
+    margin: 3px;
+  }
+  .testimonial h4 {
+    font-size: 13px;
+    margin-top: 40%;
+  }
+  .testimonial {
+    margin-left: 55%;
+    margin-top: 100vh;
+  }
+  .service-cards {
+    left: 50%;
+    margin-bottom: 50vh;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .service-cards h1 {
+    left: 45%;
+    margin-top: 4vh;
+  }
+  .service-cards h3 {
+    margin-top: 5%;
+    font-size: 25px;
+  }
+  .service-cards p {
+    margin-top: 35%;
+    font-size: 14px;
+  }
+  .service-cards i {
+    top: 25%;
+  }
+  .sub-text {
+    font-size: 20px;
+    width: 500px;
+    right: 20%;
+    top: 25%;
+  }
+  .service-cards div {
+    width: 350px;
+    height: 300px;
+  }
+  .load-text {
+    font-size: 15px;
+    width: 500px;
+    right: 20%;
+    top: 30%;
+  }
+  .contact {
+    width: 500px;
+    font-size: 18px;
+    right: 20%;
+    top: 45%;
+  }
+  .navbar {
+    margin-left: 5px;
+    margin-top: 20vh;
+  }
+  .navbar a {
+    margin-left: 2px;
+    color: white;
+    font-size: 20px;
+  }
+  .social {
+    margin-top: 2vh;
+  }
+}
+@media all and (max-width: 768px) {
+  .sub-text {
+    right: 14%;
+  }
+  .load-text {
+    right: 14%;
+    height: 150px;
+    border-bottom: 1px solid rgb(173, 173, 173);
+    padding-bottom: 20px;
+  }
+  .contact {
+    right: 14%;
+  }
+  .service-cards {
+    left: 43%;
+  }
+  .service-cards h1 {
+    left: 60%;
+    font-size: 40px;
+  }
+  .test {
+    width: 200px;
+    height: 200px;
+  }
+  .testimonial h4 {
+    font-size: 13px;
+    margin-top: 40%;
+  }
+  .testimonial {
+    margin-left: 55%;
+    margin-top: 100vh;
+  }
+  .service-cards {
+    left: 44%;
+    margin-bottom: 30vh;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .service-cards h1 {
+    left: 50%;
+    margin-top: 2vh;
+  }
+  .service-cards h3 {
+    font-size: 22px;
+  }
+  .service-cards p {
+    margin-top: 25%;
+    font-size: 14px;
+  }
+  .service-cards i {
+    font-size: 30px;
+  }
+
+  .service-cards div {
+    width: 300px;
+    height: 250px;
+  }
+
+  .navbar {
+    margin-left: 5px;
+    margin-top: 20vh;
+  }
+  .navbar a {
+    margin-left: 2px;
+    color: white;
+    font-size: 20px;
+  }
+  .social.active {
+    right: 1.5vh;
+  }
+}
