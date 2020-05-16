@@ -32,9 +32,11 @@ let homeBtn = document.querySelector(".home-click");
 
 homeBtn.addEventListener("click", function homeIsActive() {
   let about = document.querySelector(".about");
+  let blog = document.querySelector(".blog");
   let portfolio = document.querySelector(".portfolio");
   about.classList.remove("about-active");
   portfolio.classList.remove("portfolio-active");
+  blog.classList.remove("blog-active");
 });
 
 // ABOUT COME OUT
@@ -92,4 +94,14 @@ function removeAll() {
   for (let i = 0; i < pageToggle.length; i++) {
     pages[i].classList.remove("active");
   }
+}
+
+// CROSS CLICKED
+
+let crossToggle = document.querySelectorAll(".cross-clicked");
+
+for (let i = 0; i < crossToggle.length; i++) {
+  crossToggle[i].addEventListener("click", function () {
+    pages[i].classList.remove("active");
+  });
 }

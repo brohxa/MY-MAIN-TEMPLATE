@@ -50,11 +50,10 @@ body {
   font-size: 50px;
   text-align: center;
   display: block;
-  margin-top: 3vh;
+  padding: 15px;
   cursor: none;
-  position: relative;
+  position: absolute;
   transition: 0.1s ease-in;
-  margin-left: 2vw;
   color: rgb(255, 238, 6);
 }
 
@@ -1640,7 +1639,7 @@ body {
   color: rgb(230, 230, 230);
   display: grid;
   width: 70%;
-  height: 130vh;
+  height: 140vh;
   grid-template-columns: repeat(2, 1fr);
 }
 .blog-container div {
@@ -1659,8 +1658,6 @@ body {
 }
 .blog-container .blog1 {
   background-image: url("img/blog1.jpg");
-  grid-column: 1/3;
-  grid-row: 1;
 }
 .blog-container .blog2 {
   background-image: url("img/blog2.jpg");
@@ -1675,9 +1672,7 @@ body {
   background-image: url("img/blog5.jpg");
 }
 .blog-container .blog6 {
-  grid-column: 1/3;
   background-color: transparent;
-  grid-row: 3;
 }
 
 .blog-container div::before {
@@ -1691,18 +1686,20 @@ body {
   transition: 0.4s;
 }
 .blog-container div:hover::before {
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .blog-container a {
   font-size: 30px;
   display: block;
   height: 100%;
-  margin: 30px;
+  padding: 20px;
 }
 .blog-container p {
   position: absolute;
   transform: translate(-50%, -50%);
+  z-index: -1;
+  font-weight: 100;
   left: 50%;
   top: 50%;
   font-family: "poppins", sans-serif;
@@ -1711,33 +1708,58 @@ body {
 
 .page {
   position: absolute;
-  width: 0vw;
-  height: 80vh;
+  width: 40vw;
+  height: 90vh;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%);
-  transition: 2s;
+  top: 100%;
+  transform: translate(-50%, -50%);
   z-index: 2;
-  background-color: rgb(165, 165, 165);
+  background-color: rgb(251, 251, 251);
+  display: none;
+  box-shadow: 0px 0px 24px -3px rgba(0, 0, 0, 0.98);
+  overflow: scroll;
 }
 .page.active {
-  width: 40vw;
+  display: block;
 }
-.page1 {
-  background-color: blueviolet;
+
+.page .fas {
+  font-size: 40px;
+  color: rgb(61, 61, 61);
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  transform: translate(-50%);
+  cursor: pointer;
 }
-.page2 {
-  background-color: rgb(36, 19, 51);
+
+.page h3 {
+  display: block;
+  margin-top: 5vh;
+  font-family: "poppins", sans-serif;
+  font-size: 30px;
+  text-align: center;
 }
-.page3 {
-  background-color: rgb(43, 226, 73);
+.page h6 {
+  display: block;
+  margin-top: 0vh;
+  font-family: "poppins", sans-serif;
+  font-size: 14px;
+  text-align: left;
+  font-weight: 100;
+  padding: 20px;
 }
-.page4 {
-  background-color: rgb(15, 163, 143);
-}
-.page5 {
-  background-color: rgb(217, 240, 15);
-}
-.page6 {
-  background-color: rgb(233, 10, 10);
+
+.page p {
+  width: 80%;
+  height: 70%;
+  background-color: rgb(228, 227, 227);
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%);
+  margin-top: 5vh;
+  font-family: "poppins", sans-serif;
+  font-size: 18px;
+  padding: 20px;
 }
