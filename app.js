@@ -37,6 +37,8 @@ homeBtn.addEventListener("click", function homeIsActive() {
   about.classList.remove("about-active");
   portfolio.classList.remove("portfolio-active");
   blog.classList.remove("blog-active");
+  let contactPage = document.querySelector(".contact-page");
+  contactPage.classList.remove("contact-active");
 });
 
 // ABOUT COME OUT
@@ -50,6 +52,8 @@ aboutBtn.addEventListener("click", function aboutIsActive() {
   about.classList.toggle("about-active");
   portfolio.classList.remove("portfolio-active");
   blog.classList.remove("blog-active");
+  let contactPage = document.querySelector(".contact-page");
+  contactPage.classList.remove("contact-active");
 });
 
 // PORTFOLIO COME OUT
@@ -63,6 +67,8 @@ portfolioBtn.addEventListener("click", function portfolioIsActive() {
   portfolio.classList.toggle("portfolio-active");
   about.classList.remove("about-active");
   blog.classList.remove("blog-active");
+  let contactPage = document.querySelector(".contact-page");
+  contactPage.classList.remove("contact-active");
 });
 
 // BLOG COME OUT
@@ -76,6 +82,8 @@ blogBtn.addEventListener("click", function blogIsActive() {
   blog.classList.toggle("blog-active");
   about.classList.remove("about-active");
   portfolio.classList.remove("portfolio-active");
+  let contactPage = document.querySelector(".contact-page");
+  contactPage.classList.remove("contact-active");
 });
 
 // BLOG PAGES COME OUT
@@ -105,3 +113,18 @@ for (let i = 0; i < crossToggle.length; i++) {
     pages[i].classList.remove("active");
   });
 }
+
+// CONTACT COME OUT
+
+let contactButton = document.querySelector(".contact-click");
+
+contactButton.addEventListener("click", function () {
+  let contactPage = document.querySelector(".contact-page");
+  let about = document.querySelector(".about");
+  let blog = document.querySelector(".blog");
+  let portfolio = document.querySelector(".portfolio");
+  about.classList.remove("about-active");
+  portfolio.classList.remove("portfolio-active");
+  blog.classList.remove("blog-active");
+  contactPage.classList.toggle("contact-active");
+});
