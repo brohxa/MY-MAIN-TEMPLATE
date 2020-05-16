@@ -22,6 +22,9 @@
     <title>Document</title>
   </head>
   <body class="preload">
+    <div class="loader-wrapper">
+      <span class="loader"><span class="loader-inner"></span></span>
+    </div>
     <!-- MAIN HEADING -->
     <h3 class="main-heading">
       REST
@@ -311,5 +314,13 @@
     <script src="app.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js
     "></script>
+    <script>
+      $(window).on("load", function () {
+        $(".loader-wrapper").fadeOut("slow");
+      });
+      $(document).ready(function () {
+        $("body").removeClass("preload");
+      });
+    </script>
   </body>
 </html>

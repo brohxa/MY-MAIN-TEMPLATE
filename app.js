@@ -19,13 +19,6 @@ socialBtn.addEventListener("click", function () {
   socialBtn.classList.toggle("clicked");
 });
 
-// PRELOAD TYPEWRITER
-
-window.addEventListener("load", function () {
-  let preload = document.querySelector(".preload");
-  preload.classList.remove("preload");
-});
-
 // HOME REMOVE ALL
 
 let homeBtn = document.querySelector(".home-click");
