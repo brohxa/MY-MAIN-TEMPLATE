@@ -4,7 +4,7 @@ gsap.from("nav", {
   x: -30,
   opacity: 0,
   duration: 1,
-  delay: 3,
+  delay: 1,
   ease: Power1.easeOut,
 });
 
@@ -17,6 +17,13 @@ socialBtn.addEventListener("click", function () {
 
 socialBtn.addEventListener("click", function () {
   socialBtn.classList.toggle("clicked");
+});
+
+// PRELOAD TYPEWRITER
+
+window.addEventListener("load", function () {
+  let preload = document.querySelector(".preload");
+  preload.classList.remove("preload");
 });
 
 // HOME REMOVE ALL
@@ -68,3 +75,21 @@ blogBtn.addEventListener("click", function blogIsActive() {
   about.classList.remove("about-active");
   portfolio.classList.remove("portfolio-active");
 });
+
+// BLOG PAGES COME OUT
+
+let pageToggle = document.querySelectorAll(".page-toggle");
+let pages = document.querySelectorAll(".page");
+
+for (let i = 0; i < pageToggle.length; i++) {
+  pageToggle[i].addEventListener("click", function () {
+    removeAll();
+    pages[i].classList.toggle("active");
+  });
+}
+
+function removeAll() {
+  for (let i = 0; i < pageToggle.length; i++) {
+    pages[i].classList.remove("active");
+  }
+}
