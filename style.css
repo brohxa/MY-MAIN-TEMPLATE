@@ -172,6 +172,7 @@ body {
   transition: 0.1s;
   position: fixed;
   right: -10vw;
+  top: 10vh;
 }
 
 .social.active {
@@ -1762,4 +1763,126 @@ body {
   font-family: "poppins", sans-serif;
   font-size: 18px;
   padding: 20px;
+}
+
+/* MEDIA FOR BLOG */
+
+@media all and (max-width: 1024px) {
+  .blog-container {
+    left: 55%;
+    width: 75%;
+    height: 100vh;
+  }
+  .page {
+    width: 70vw;
+    height: 50vh;
+    left: 55%;
+  }
+  .page h3 {
+    font-size: 30px;
+  }
+  .page h6 {
+    font-weight: 100;
+    margin-top: -20px;
+  }
+  .page p {
+    font-size: 14px;
+  }
+  .blog-container a {
+    font-size: 25px;
+  }
+  .blog-container p {
+    text-align: center;
+    width: 100%;
+    font-size: 15px;
+  }
+}
+@media all and (max-width: 800px) {
+  .page {
+    width: 70vw;
+    height: 50vh;
+    left: 55%;
+  }
+}
+@media all and (max-width: 580px) {
+  .page .fas {
+    font-size: 25px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+  .page {
+    height: 70vh;
+    width: 75vw;
+    left: 57%;
+  }
+  .page p {
+    font-size: 12px;
+  }
+
+  .blog-heading {
+    width: 220px;
+    height: 60px;
+    font-size: 30px;
+    top: 35%;
+  }
+}
+@media all and (max-width: 414px) {
+  .page .fas {
+    font-size: 25px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+  .page {
+    height: 70vh;
+    width: 75vw;
+    left: 57%;
+  }
+  .page p {
+    font-size: 12px;
+    width: 90%;
+  }
+  .page h3 {
+    font-size: 24px;
+  }
+
+  .blog-heading {
+    width: 220px;
+    height: 60px;
+    font-size: 30px;
+    top: 35%;
+  }
+  .blog-container {
+    left: 55%;
+    width: 75%;
+    height: 180vh;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .blog-container a {
+    font-size: 20px;
+  }
+  .blog-container p {
+    font-size: 13px;
+  }
+}
+@media all and (max-width: 350px) {
+  .blog-heading {
+    width: 170px;
+    height: 60px;
+    font-size: 20px;
+    top: 35%;
+  }
+  .blog-container {
+    left: 55%;
+    width: 75%;
+    height: 180vh;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .blog-container a {
+    font-size: 20px;
+  }
+  .blog-container p {
+    font-size: 13px;
+  }
 }
